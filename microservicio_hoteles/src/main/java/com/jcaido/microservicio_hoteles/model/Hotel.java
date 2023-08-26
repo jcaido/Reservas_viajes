@@ -5,26 +5,26 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "hoteles")
+@Table(name = "hotels")
 public class Hotel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idHotel;
-    private Integer categoria;
-    private Boolean disponible;
-    private String nombre;
-    private double precio;
+    private Integer category;
+    private Boolean available;
+    private String name;
+    private double price;
 
     public Hotel() {
     }
 
-    public Hotel(Integer idHotel, Integer categoria, Boolean disponible, String nombre, double precio) {
+    public Hotel(Integer idHotel, Integer category, Boolean available, String name, double price) {
         this.idHotel = idHotel;
-        this.categoria = categoria;
-        this.disponible = disponible;
-        this.nombre = nombre;
-        this.precio = precio;
+        this.category = category;
+        this.available = available;
+        this.name = name;
+        this.price = price;
     }
 
     public Integer getIdHotel() {
@@ -35,35 +35,35 @@ public class Hotel implements Serializable {
         this.idHotel = idHotel;
     }
 
-    public Integer getCategoria() {
-        return categoria;
+    public Integer getCategory() {
+        return category;
     }
 
-    public void setCategoria(Integer categoria) {
-        this.categoria = categoria;
+    public void setCategory(Integer category) {
+        this.category = category;
     }
 
-    public Boolean getDisponible() {
-        return disponible;
+    public Boolean getAvailable() {
+        return available;
     }
 
-    public void setDisponible(Boolean disponible) {
-        this.disponible = disponible;
+    public void setAvailable(Boolean available) {
+        this.available = available;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public double getPrecio() {
-        return precio;
+    public double getPrice() {
+        return price;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
