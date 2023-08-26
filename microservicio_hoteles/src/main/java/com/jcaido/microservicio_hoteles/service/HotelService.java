@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface HotelService {
     List<Hotel> obtainHotels();
+    List<Hotel> obtainAvailableHotels();
 }

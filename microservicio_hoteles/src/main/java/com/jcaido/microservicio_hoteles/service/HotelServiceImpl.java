@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class HotelServiceImpl implements HotelService{
@@ -16,5 +17,12 @@ public class HotelServiceImpl implements HotelService{
     @Override
     public List<Hotel> obtainHotels() {
         return hotelRepository.findAll();
+    }
+
+    @Override
+    public List<Hotel> obtainAvailableHotels() {
+        List<Hotel> availableHotels = hotelRepository.findAll();
+
+        return availableHotels.stream().filter(hotel -> hotel.getAvailable().equals(true)).collect(Collectors.toList());
     }
 }
