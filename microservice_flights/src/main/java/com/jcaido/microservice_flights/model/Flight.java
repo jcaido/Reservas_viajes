@@ -10,7 +10,7 @@ public class Flight implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idVuelo;
+    private Integer idFlight;
     private String company;
     private String fecha;
     private Integer places;
@@ -19,20 +19,20 @@ public class Flight implements Serializable {
     public Flight() {
     }
 
-    public Flight(Integer idVuelo, String company, String fecha, Integer places, Double price) {
-        this.idVuelo = idVuelo;
+    public Flight(Integer idFlight, String company, String fecha, Integer places, Double price) {
+        this.idFlight = idFlight;
         this.company = company;
         this.fecha = fecha;
         this.places = places;
         this.price = price;
     }
 
-    public Integer getIdVuelo() {
-        return idVuelo;
+    public Integer getIdFlight() {
+        return idFlight;
     }
 
-    public void setIdVuelo(Integer idVuelo) {
-        this.idVuelo = idVuelo;
+    public void setIdFlight(Integer idFlight) {
+        this.idFlight = idFlight;
     }
 
     public String getCompany() {
