@@ -28,4 +28,9 @@ public class FlightController {
     public Flight obtainFlightById(@PathVariable("idFlight") int idFlight) {
         return flightService.obtainFlightById(idFlight);
     }
+
+    @GetMapping(value = "flights/{places}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Flight> obtainAvailableFlightsForPlaces(@PathVariable("places") int places) {
+        return flightService.obtainAvailableFlightsForPlaces(places);
+    }
 }
