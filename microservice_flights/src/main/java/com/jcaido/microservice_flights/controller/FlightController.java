@@ -4,10 +4,7 @@ import com.jcaido.microservice_flights.model.Flight;
 import com.jcaido.microservice_flights.service.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,5 +22,10 @@ public class FlightController {
     @GetMapping(value = "flights", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Flight> obtainAllFlights() {
         return flightService.obtainAllFlights();
+    }
+
+    @GetMapping(value = "flight/{idFlight}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Flight obtainFlightById(@PathVariable("idFlight") int idFlight) {
+        return flightService.obtainFlightById(idFlight);
     }
 }
