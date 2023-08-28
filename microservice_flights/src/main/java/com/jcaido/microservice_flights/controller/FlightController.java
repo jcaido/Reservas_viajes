@@ -33,4 +33,10 @@ public class FlightController {
     public List<Flight> obtainAvailableFlightsForPlaces(@PathVariable("places") int places) {
         return flightService.obtainAvailableFlightsForPlaces(places);
     }
+
+    @PutMapping(value = "flights/{idFlights}/{places}")
+    public void updatePlacesFlight(@PathVariable("idFlights") int idFlight,
+                                   @PathVariable("places") int places) {
+        flightService.updatePlacesFlight(idFlight, places);
+    }
 }
