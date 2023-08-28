@@ -30,7 +30,6 @@ public class FlightServiceImpl implements FlightService{
                 .filter(flight -> flight.getPlaces()>= places)
                 .collect(Collectors.toList());
     }
-
     @Override
     public Flight obtainFlightById(int idFlight) {
         return flightRepository.findById(idFlight).orElseThrow();
