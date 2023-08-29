@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka_server" />
         <module name="microservice_flights" />
+        <module name="microservice_bookings" />
         <module name="microservice_hotels" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="eureka_server" target="17" />
+      <module name="microservice_bookings" target="17" />
       <module name="microservice_flights" target="17" />
       <module name="microservice_hotels" target="17" />
     </bytecodeTargetLevel>
@@ -20,6 +22,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka_server" options="-parameters" />
+      <module name="microservice_bookings" options="-parameters" />
       <module name="microservice_flights" options="-parameters" />
       <module name="microservice_hotels" options="-parameters" />
     </option>
