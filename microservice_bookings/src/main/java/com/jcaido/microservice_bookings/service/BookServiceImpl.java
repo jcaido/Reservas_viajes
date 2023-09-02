@@ -30,6 +30,7 @@ public class BookServiceImpl implements BookService{
 
     @Override
     public List<Book> obtenerReservas() {
-        return null;
+
+        return bookRepository.findAll();
     }
 }
