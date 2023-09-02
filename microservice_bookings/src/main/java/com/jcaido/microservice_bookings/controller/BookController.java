@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class BookController {
 
@@ -18,5 +20,9 @@ public class BookController {
     @PostMapping(value = "booking/{totalPersons}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public Book createBooking(@RequestBody Book book, @PathVariable("totalPersons") int totalPersons) {
         return bookService.createBooking(book, totalPersons);
+    }
+
+    public List<Book> getBookings() {
+        return bookService.getBookings();
     }
 }

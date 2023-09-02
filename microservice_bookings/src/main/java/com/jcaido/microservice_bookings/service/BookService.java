@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface BookService {
     Book createBooking(Book book, int totalPersons);
-    List<Book> obtenerReservas();
+    List<Book> getBookings();
 }

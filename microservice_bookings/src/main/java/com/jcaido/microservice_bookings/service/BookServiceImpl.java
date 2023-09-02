@@ -29,7 +29,7 @@ public class BookServiceImpl implements BookService{
     }
 
     @Override
-    public List<Book> obtenerReservas() {
+    public List<Book> getBookings() {
 
         return bookRepository.findAll();
     }
