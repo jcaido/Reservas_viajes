@@ -27,7 +27,7 @@ public class HotelController {
         return hotelService.obtainHotels();
     }
 
-    @GetMapping(value = "availableHotels", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "hotels/availableHotels", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Hotel> obtainAvailableHotels() {
         return hotelService.obtainAvailableHotels();
     }
