@@ -20,7 +20,7 @@ public class BookController {
         return bookService.createBooking(book, totalPersons);
     }
 
-    @GetMapping(value = "bookings", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "booking/bookings", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Book> getBookings() {
         return bookService.getBookings();
     }
