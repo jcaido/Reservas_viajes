@@ -24,7 +24,7 @@ public class FlightController {
         return flightService.obtainAllFlights();
     }
 
-    @GetMapping(value = "flight/{idFlight}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "flights/flight/{idFlight}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Flight obtainFlightById(@PathVariable("idFlight") int idFlight) {
         return flightService.obtainFlightById(idFlight);
     }
