@@ -1,0 +1,36 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: server-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: service-flights
+          #lb:// cuando se va a acceder a través de Eureka
+          uri: lb://servicio-flights #http://localhost:9000
+          predicates:
+            - Path=/flights/**
+          filters:
+            - RewritePath=/flights/*, /
+
+        - id: service-hotels
+          #lb:// cuando se va a acceder a través de Eureka
+          uri: lb://servicio-hoteles #http://localhost:8000
+          predicates:
+            - Path=/hotels/**
+          filters:
+            - RewritePath=/hotels/*, /
+
+        - id: service-bookings
+          #lb:// cuando se va a acceder a través de Eureka
+          uri: lb://servicio-bookings #http://localhost:10000
+          predicates:
+            - Path=/booking/**
+          filters:
+            - RewritePath=/booking/*, /
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
