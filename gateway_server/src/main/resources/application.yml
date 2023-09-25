@@ -10,25 +10,25 @@ spring:
           #lb:// cuando se va a acceder a través de Eureka
           uri: lb://servicio-flights #http://localhost:9000
           predicates:
-            - Path=/flights/**
+            - Path=/sflights/**
           filters:
-            - RewritePath=/flights/*, /
+            - RewritePath=/sflights/*, /
 
         - id: service-hotels
           #lb:// cuando se va a acceder a través de Eureka
           uri: lb://servicio-hoteles #http://localhost:8000
           predicates:
-            - Path=/hotels/**
+            - Path=/shotels/**
           filters:
-            - RewritePath=/hotels/*, /
+            - RewritePath=/shotels/*, /
 
         - id: service-bookings
           #lb:// cuando se va a acceder a través de Eureka
           uri: lb://servicio-bookings #http://localhost:10000
           predicates:
-            - Path=/booking/**
+            - Path=/sbooking/**
           filters:
-            - RewritePath=/booking/*, /
+            - RewritePath=/sbooking/*, /
 
 eureka:
   client:
