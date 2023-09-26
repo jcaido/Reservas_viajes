@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/microservice_flights/pom.xml" />
         <option value="$PROJECT_DIR$/microservice_bookings/pom.xml" />
         <option value="$PROJECT_DIR$/gateway_server/pom.xml" />
+        <option value="$PROJECT_DIR$/server_config/pom.xml" />
       </list>
     </option>
   </component>

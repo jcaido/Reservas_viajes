@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/microservice_bookings/microservice_bookings.iml" filepath="$PROJECT_DIR$/microservice_bookings/microservice_bookings.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice_flights/microservice_flights.iml" filepath="$PROJECT_DIR$/microservice_flights/microservice_flights.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservicio_hoteles/microservice_hotels.iml" filepath="$PROJECT_DIR$/microservicio_hoteles/microservice_hotels.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server_config/server_config.iml" filepath="$PROJECT_DIR$/server_config/server_config.iml" />
     </modules>
   </component>
 </project>
