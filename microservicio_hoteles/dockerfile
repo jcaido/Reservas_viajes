@@ -1,0 +1,4 @@
+FROM openjdk:19-jdk-alpine
+ADD target/microservicio_hoteles.jar microservicio_hoteles.jar
+EXPOSE 8000
+ENTRYPOINT ["java", "-jar", "/microservicio_hoteles.jar"]
