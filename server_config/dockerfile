@@ -1,0 +1,4 @@
+FROM openjdk:19-jdk-alpine
+ADD target/server_config-0.0.1-SNAPSHOT.jar server_config.jar
+EXPOSE 8888
+ENTRYPOINT ["java", "-jar", "/server_config.jar"]
